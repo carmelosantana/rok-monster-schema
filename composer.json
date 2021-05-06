@@ -1,0 +1,10 @@
+{
+    "name": "carmelosantana/rok-monster-schema",
+    "description": "Schema for OCR instructions and interface coordinates for Rise of Kingdoms.",
+    "keywords": [
+        "Rise of Kingdoms",
+        "rok"
+    ],
+    "homepage": "https://github.com/carmelosantana/rok-monster-schema",
+    "license": "MIT"
+}
