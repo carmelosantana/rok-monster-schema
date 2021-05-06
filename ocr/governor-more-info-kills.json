@@ -1,12 +1,11 @@
 {
-    "title": "Gov More Info Kills",
+    "title": "Governor More Info Kills",
     "author": "Carmelo Santana",
     "game_version": "1004516_160511",
     "width": 1920,
     "height": 1080,
     "ocr_schema": {
         "name": {
-            "callback": 0,
             "crop": [
                 469,
                 158,
@@ -15,10 +14,6 @@
             ]
         },
         "power": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "lang": [
                 "eng"
             ],
@@ -44,10 +39,6 @@
             ]
         },
         "kill_points": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "lang": [
                 "eng"
             ],
@@ -73,10 +64,6 @@
             ]
         },
         "dead": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "lang": [
                 "eng"
             ],
@@ -100,12 +87,8 @@
                 8,
                 9
             ]
-        },        
+        },
         "t4": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "crop": [
                 990,
                 672,
@@ -131,10 +114,6 @@
             ]
         },
         "t4_points": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "crop": [
                 1380,
                 672,
@@ -160,10 +139,6 @@
             ]
         },
         "t5": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "crop": [
                 990,
                 732,
@@ -189,10 +164,6 @@
             ]
         },
         "t5_points": {
-            "callback": [
-                "carmelosantana\\RoKMonster\\Transformer",
-                "strRemoveNonNumeric"
-            ],
             "crop": [
                 1380,
                 730,
@@ -221,55 +192,5 @@
     "fingerprint": "f0b4c0c28080c0cc",
     "threshold": 15,
     "oem": 0,
-    "psm": 7,
-    "table": [
-        [
-            "Name",
-            "name",
-            false,
-            "white"
-        ],
-        [
-            "Power",
-            "power",
-            false,
-            "green"
-        ],
-        [
-            "Kill Points",
-            "kill_points",
-            false,
-            "white"
-        ],
-        [
-            "T4 Kills",
-            "t4",
-            false,
-            "white"
-        ],
-        [
-            "T4 Points",
-            "t4_points",
-            false,
-            "white"
-        ],
-        [
-            "T5 Kills",
-            "t5",
-            false,
-            "white"
-        ],
-        [
-            "T5 Points",
-            "t5_points",
-            false,
-            "white"
-        ],        
-        [
-            "Dead",
-            "dead",
-            false,
-            "yellow"
-        ]
-    ]
+    "psm": 7
 }
