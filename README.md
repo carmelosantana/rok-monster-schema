@@ -5,13 +5,17 @@ This repository will attempt the following;
 - Provide up-to-date interface coordinates for UI elements
 - Unify OCR processes in the RoK data capture community
 
+## Schema
+
+The JSON schema defines all allowed properties and values.
+
 ## Community
 
-Have a question, an idea, or need help getting started? Checkout our [Discord](https://discord.gg/drhxwVQ)!
+Have a question, idea, or need help getting started? Checkout our [Discord](https://discord.gg/drhxwVQ)!
 
 ## Funding
 
-If you find **rok-monster** useful you can help fund future development by making a contribution to one of our funding sources below.
+If you find **rok-monster-schema** useful you can help fund future development by making a contribution to one of our funding sources below.
 
 - [PayPal](https://www.paypal.com/donate?hosted_button_id=EKK8CQTPJG7WL)
 - Bitcoin `bc1qx7v5vvxwnhpl3dssggy0hytcx2rpq5dkkfwyy4`
