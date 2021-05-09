@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "format": "grid-strict",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title",
+      "description": "Name your template",
+      "options": {
+        "grid_columns": 6
+      }
+    },   
+    "author": {
+      "type": "string",
+      "title": "Author Name",
+      "description": "Your name",
+      "options": {
+        "grid_columns": 6
+      }
+    },
+    "width": {
+      "type": "integer",
+      "title": "Width",
+      "description": "Original media",
+      "options": {
+        "grid_columns": 3
+      }
+    },
+    "height": {
+      "type": "string",
+      "title": "Height",
+      "description": "Original media",
+      "options": {
+        "grid_columns": 3
+      }
+    },    
+    "lang": {
+      "type": "string",
+      "description": "Tesseract default language",
+      "title": "Language",
+      "enum": [
+        "eng",
+        "ara",
+        "chi_sim",
+        "chi_tra",
+        "fra",
+        "deu",
+        "ind",
+        "ita",
+        "jpn",
+        "kor",
+        "msa",
+        "por",
+        "rus",
+        "spa",
+        "spa_old",
+        "tha",
+        "tur",
+        "vie"
+      ],
+      "default": "eng",
+      "options": {
+        "grid_columns": 6
+      }
+    },    
+    "oem": {
+      "type": "number",
+      "default": "0",
+      "minimum": 0,
+      "enumDesc": "",
+      "maximum": 3,
+      "title": "OCR Engine mode",
+      "description": "Accuracy vs performance",
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "options": {
+        "enum_titles": [
+          "0 = Original Tesseract only.",
+          "1 = Neural nets LSTM only.",
+          "2 = Tesseract + LSTM.",
+          "3 = Default, based on what is available."
+        ],
+        "grid_columns": 6
+      }
+    },
+    "psm": {
+      "type": "number",
+      "description": "Layout analysis",
+      "title": "Page Segmentation Mode",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "enumDesc": "",
+      "minimum": 0,
+      "maximum": 13,
+      "default": "0",
+      "options": {
+        "enum_titles": [
+          "0 = Orientation and script detection (OSD) only.",
+          "1 = Automatic page segmentation with OSD.",
+          "2 = Automatic page segmentation, but no OSD, or OCR. (not implemented)",
+          "3 = Fully automatic page segmentation, but no OSD. (Default)",
+          "4 = Assume a single column of text of variable sizes.",
+          "5 = Assume a single uniform block of vertically aligned text.",
+          "6 = Assume a single uniform block of text.",
+          "7 = Treat the image as a single text line.",
+          "8 = Treat the image as a single word.",
+          "9 = Treat the image as a single word in a circle.",
+          "10 = Treat the image as a single character.",
+          "11 = Sparse text. Find as much text as possible in no particular order.",
+          "12 = Sparse text with OSD.",
+          "13 = Raw line. Treat the image as a single text line, bypassing hacks that are Tesseract-specific."
+        ],
+        "grid_columns": 6
+      }
+    },   
+    "autocrop": {
+      "type": "boolean",
+      "format": "checkbox",
+      "title": "AutoCrop",
+      "description": "Attempts to remove a single color background to isolate a an object. Results may vary.",
+      "options": {
+        "grid_columns": 6,
+        "grid_break": true
+      }
+    },
+    "sample": {
+      "type": "boolean",
+      "format": "checkbox",
+      "title": "Sample Image",
+      "description": "Used for media compassion ",
+      "options": {
+        "format": "checkbox",
+        "grid_columns": 3
+      }
+    },
+    "distortion": {
+      "type": "integer",
+      "title": "Distortion Threshold",
+      "description": "Difference compared to sample",
+      "options": {
+        "grid_columns": 3,
+        "grid_break": true
+      },
+      "minimum": 0,
+      "maximum": 1,
+      "default": "0.17"
+    },
+    "segments": {
+      "type": "array",
+      "title": "Segments",
+      "description": "OCR capture instructions",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Key for segment"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Title for display headers"
+          },
+          "allowlist": {
+            "type": "string",
+            "title": "Allow List",
+            "description": "Array of allowed characters"
+          },
+          "callback": {
+            "title": "Callback",
+            "type": "string",
+            "description": "Apply a function to transformer OCR data"
+          },          
+          "configfile": {
+            "type": "string",
+            "title": "Config File",
+            "description": "Additional optionals"
+          },
+          "crop": {
+            "title": "OCR coordinates",
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number",
+                "title": "X",
+                "description": "Coordinate"
+              },
+              "y": {
+                "type": "number",
+                "title": "Y",
+                "description": "Coordinate"
+              },
+              "w": {
+                "type": "number",
+                "title": "Width",
+                "description": "Dimensions"
+              },
+              "h": {
+                "type": "number",
+                "title": "Height",
+                "description": "Dimensions"
+              }
+            },
+            "description": "Coordinates and dimensions",
+            "required": [
+              "x",
+              "y",
+              "w",
+              "h"
+            ]
+          }
+        },
+        "title": "Segment",
+        "required": [
+          "callback",
+          "allowlist",
+          "crop",
+          "name",
+          "title",
+          "configfile"
+        ]
+      },
+      "options": {
+        "grid_columns": 12
+      }
+    }
+  },
+  "title": "Template Schema",
+  "description": "Base schema for MonsterVision templates.",
+  "required": [
+    "title",
+    "author",
+    "width",
+    "height",
+    "autocrop",
+    "sample",
+    "distortion",
+    "lang",
+    "oem",
+    "psm",
+    "segments"
+  ]
+}
