@@ -1,6 +1,7 @@
 {
     "name": "carmelosantana/rok-monster-schema",
     "description": "Schema for OCR instructions and interface coordinates for Rise of Kingdoms.",
+    "version": "0.1.1",
     "keywords": [
         "Rise of Kingdoms",
         "rok"
