@@ -1,62 +1,71 @@
 {
     "center": {
-        "xy": [
+        "type": 0,
+        "input": [
             960,
             540
         ]
     },
-    "btn-map-castle": {
-        "xy": [
+    "map-castle": {
+        "type": 0,
+        "input": [
             88,
             980
         ],
         "fingerprint": "231187747852b253"
     },
-    "btn-new-troops": {
-        "xy": [
+    "new-troops": {
+        "type": 0,
+        "input": [
             1493,
             226
         ],
         "fingerprint": "e8e2929a96d49b9b"
     },
-    "btn-new-troops-march": {
-        "xy": [
+    "new-troops-march": {
+        "type": 0,
+        "input": [
             1389,
             932
         ],
         "fingerprint": "d0dcb8b8bcbcfce8"
     },
-    "btn-resource-gather": {
-        "xy": [
+    "resource-gather": {
+        "type": 0,
+        "input": [
             1443,
             725
         ],
         "fingerprint": "3b11a5c480c0a57b",
         "sleep": 3
     },    
-    "btn-search-build": {
-        "xy": [
+    "search-build": {
+        "type": 0,
+        "input": [
             106,
             796
         ],
         "fingerprint": "63753e2e2c6c077b"
     },
-    "btn-search-food": {
-        "xy": [
+    "search-food": {
+        "type": 0,
+        "input": [
             675,
             929
         ],
         "fingerprint": "36263c2e2c6e2671"
     },
-    "btn-search-food-plus": {
-        "xy": [
+    "search-food-plus": {
+        "type": 0,
+        "input": [
             882,
             600
         ],
         "fingerprint": "36263c2e2c6e2671"
     },
-    "btn-search-food-search": {
-        "xy": [
+    "search-food-search": {
+        "type": 0,
+        "input": [
             664,
             729
         ],
