@@ -1,13 +1,26 @@
 # RoK Schema
 
-This repository will attempt the following;
+🌽 This repository will attempt the following;
 
-- Provide up-to-date interface coordinates for UI elements
-- Unify OCR processes in the RoK data capture community
+- Provide up-to-date interface coordinates for Rise of Kingdoms UI elements.
+- Unify OCR processes in the RoK data capture community.
 
-## Schema
+---
 
-The JSON schema defines all allowed properties and values.
+📢 **Important:** All coordinates currently reference a UI of `1920 x 1080`.
+
+---
+
+📌 Areas that need improvement and could use help from the community;
+
+- Native tools to help build action, ocr, and input templates.
+- Determine how best to handle other resolutions when using coordinate arguments.
+
+## Tools
+
+Utilities to help explore the schema and build valid action and input mappings.
+
+- [json-schema-visual-editor](https://hellosean1025.github.io/json-schema-visual-editor/)
 
 ## Community
 
