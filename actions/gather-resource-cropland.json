@@ -3,14 +3,14 @@
         "name": "Gather corn",
         "description": "Collect resources from Cropland.",
         "input": [
-            "btn-map-castle",
-            "btn-search-build",
-            "btn-search-food",
-            "btn-search-food-plus",
-            "btn-search-food-search",
-            "btn-resource-gather",
-            "btn-new-troops",
-            "btn-search-march"
+            "map-castle",
+            "search-build",
+            "search-food",
+            "search-food-plus",
+            "search-food-search",
+            "resource-gather",
+            "new-troops",
+            "search-march"
         ]
     }
 }
