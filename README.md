@@ -16,6 +16,50 @@
 - Native tools to help build action, ocr, and input templates.
 - Determine how best to handle other resolutions when using coordinate arguments.
 
+## Definitions
+
+|Schema|Purpose|
+|-|-|
+|[Action](#action)|Grouping of inputs to perform an action.|
+|[Input](#input)|Allowed inputs as defined by [adb](https://developer.android.com/studio/command-line/adb).|
+|[OCR](#ocr)|Instructions for optical character recognition.|
+
+### Actions
+
+Lists several inputs to perform a particular action. Actions should be limited to a *single task*.
+
+#### Definition
+
+|Key|Type|Description|
+|-|-|-|
+|name|`string`|Unique identifier|
+|description|`string`|Describe action|
+|input|`array`|Ordered list of [inputs](#input) to perform|
+
+- Keyed by unique `(string)` ID
+- 1 action per file
+
+#### Example
+
+```json
+{
+    "gather-resource-cropland": {
+        "name": "Gather corn",
+        "description": "Collect resources from Cropland.",
+        "input": [
+            "map-castle",
+            "search-build",
+            "search-food",
+            "search-food-plus",
+            "search-food-search",
+            "resource-gather",
+            "new-troops",
+            "search-march"
+        ]
+    }
+}
+```
+
 ## Tools
 
 Utilities to help explore the schema and build valid action and input mappings.
